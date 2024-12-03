@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch</title>
+  <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css"> <!-- Link to integrated styles -->
+  <link rel="stylesheet" href="stopwatch web application.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav__header">
+      <div class="nav__logo">
+        <a href="#">
+          
+          
+        </a>
+      </div>
+      <div class="nav__menu__btn" id="menu-btn">
+        
+      </div>
+    </div>
+    <ul class="nav__links" id="nav-links">
+   
+      <li><a href="#stopwatch" style="color: #3b3a77;"><B>Stopwatch</a></B></li>
+      <li><a href="https://ksvhub9.github.io/ABOUTME/"><button class="btn">Learn More</button></a></li>
+    </ul>
+  </nav>
+
+  <!-- Stopwatch Section -->
+  <div class="stopwatch-container" id="stopwatch">
+    <div class="stopwatch">
+      <div class="smiley-face" id="smiley-face">😊</div>
+      <div class="time-display" id="time-display" style="color: #3b3a77;">00:00:00.000</div>
+      <div class="controls">
+        <button id="start-btn" class="control-btn start-btn">Start</button>
+        <button id="pause-btn" class="control-btn" disabled>Pause</button>
+        <button id="reset-btn" class="control-btn reset-btn">Reset</button>
+        <button id="lap-btn" class="control-btn lap-btn">Lap</button>
+      </div>
+      <div id="lap-times" class="lap-times" style="color: #3b3a77; font-weight: bold;"></div>
+    </div>
+  </div>
+
+  <script src="stopwatch web application.js"></script>
+</body>
+</html>

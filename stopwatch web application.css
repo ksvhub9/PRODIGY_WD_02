@@ -1,0 +1,167 @@
+/* Universal Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #9792f6, #f9f9f9);
+  color: #fff;
+}
+
+/* Navigation Bar */
+nav {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  
+}
+
+.nav__logo img {
+  height: 50px;
+}
+
+.nav__links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav__links li {
+  list-style: none;
+}
+
+.nav__links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav__links a:hover {
+  color: #312d78;
+}
+
+.btn {
+  padding: 12px 30px;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(135deg, #6c63ff, #3b3a77);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #5a53e6;
+  transform: scale(1.05);
+}
+
+/* Stopwatch Container */
+.stopwatch-container {
+  margin-top: 100px; /* To avoid overlap with nav */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+  padding: 40px;
+}
+
+.stopwatch {
+  width: 400px;
+  text-align: center;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.time-display {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 20px 0;
+  color: #fff;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.control-btn {
+  flex: 1;
+  min-width: 100px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #6c63ff, #3b3a77);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.control-btn:hover {
+  background: #5a53e6;
+  transform: scale(1.05);
+}
+
+/* Lap Times */
+.lap-times {
+  margin-top: 20px;
+  padding: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  border-top: 1px solid rgba(139, 131, 131, 0.3);
+}
+
+.lap-times div {
+  font-size: 1rem;
+  margin: 5px 0;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.lap-times div:nth-child(even) {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Smiley Face Animation */
+.smiley-face {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stopwatch {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .control-btn {
+    font-size: 0.9rem;
+    min-width: auto;
+  }
+}
